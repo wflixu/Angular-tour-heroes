@@ -21,3 +21,5 @@ export class DashboardComponent implements OnInit {
       .subscribe(heroes => this.heroes = heroes.slice(1, 5));
   }
 }
+
+
