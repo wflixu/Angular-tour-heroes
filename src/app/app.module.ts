@@ -4,6 +4,8 @@ import { RouterModule } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"; // <-- NgModel lives here
 
+import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
+
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./in-memory-data.service";
 
@@ -20,6 +22,9 @@ import { FormTestComponent } from "./components/form-test/form-test.component";
 import { NameEditorComponent } from "./components/name-editor/name-editor.component";
 import { ProfileEditorComponent } from './components/profile-editor/profile-editor.component';
 import { HeroFormComponent } from './components/hero-form/hero-form.component';
+import { ZorroPageComponent } from './pages/zorro-page/zorro-page.component';
+
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,8 @@ import { HeroFormComponent } from './components/hero-form/hero-form.component';
     FormTestComponent,
     NameEditorComponent,
     ProfileEditorComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    ZorroPageComponent,
   ],
   imports: [
     HttpClientModule,
@@ -43,6 +49,8 @@ import { HeroFormComponent } from './components/hero-form/hero-form.component';
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
+    NgZorroAntdModule,
+    NzButtonModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false
     })

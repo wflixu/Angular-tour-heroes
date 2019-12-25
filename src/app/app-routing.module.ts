@@ -7,10 +7,12 @@ import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
 
 import { HeroesTourComponent } from "./pages/heroes-tour/heroes-tour.component";
 import { FormPageComponent } from "./pages/form-page/form-page.component";
+import { ZorroPageComponent } from './pages/zorro-page/zorro-page.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/heroes-tour", pathMatch: "full" },
+  { path: "", redirectTo: "/zorro", pathMatch: "full" },
   { path: "dashboard", component: DashboardComponent },
+  { path: "zorro", component: ZorroPageComponent },
   { path: "form", component: FormPageComponent },
   { path: "detail/:id", component: HeroDetailComponent },
   { path: "heroes-tour", component: HeroesTourComponent }
