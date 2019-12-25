@@ -18,6 +18,8 @@ import { HeroesTourComponent } from "./pages/heroes-tour/heroes-tour.component";
 import { FormPageComponent } from "./pages/form-page/form-page.component";
 import { FormTestComponent } from "./components/form-test/form-test.component";
 import { NameEditorComponent } from "./components/name-editor/name-editor.component";
+import { ProfileEditorComponent } from './components/profile-editor/profile-editor.component';
+import { HeroFormComponent } from './components/hero-form/hero-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { NameEditorComponent } from "./components/name-editor/name-editor.compon
     HeroesTourComponent,
     FormPageComponent,
     FormTestComponent,
-    NameEditorComponent
+    NameEditorComponent,
+    ProfileEditorComponent,
+    HeroFormComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,4 +1,4 @@
-<label>
+<!-- <label>
   Name:
   <input type="text" [formControl]="name">
 </label>
@@ -9,4 +9,27 @@
 
 <p>
   <button (click)="updateName()">Update Name</button>
+</p> -->
+
+<div>
+  <ng-template *ngTemplateOutlet="show ? inputTemplateRef : defaultTemplateRef"></ng-template>
+</div>
+
+<ng-template #inputTemplateRef>
+
+  <ng-content>
+
+  </ng-content>
+
+
+</ng-template>
+<p>
+  <ng-content>
+
+  </ng-content>
 </p>
+
+
+<ng-template #defaultTemplateRef>
+  <h2>我是默认内容</h2>
+</ng-template>

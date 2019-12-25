@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ContentChild, TemplateRef } from "@angular/core";
 import { FormControl } from "@angular/forms";
 
 @Component({
@@ -8,12 +8,22 @@ import { FormControl } from "@angular/forms";
 })
 export class NameEditorComponent implements OnInit {
   name = new FormControl("");
-
+  public show:boolean = true;
+  @ContentChild('editorContent', { static: true }) editorContent: TemplateRef<void>;
   constructor() {}
 
-  ngOnInit() {}
+
+  ngOnInit() {
+    console.log(this.editorContent);
+
+    // if(this.editorContent){
+    //   this.show = true;
+    // }else {
+    //   this.show = false;
+    // }
+  }
 
   updateName() {
-    this.name.setValue("Nancy");
+    this.name.setValue('Nancy');
   }
 }
