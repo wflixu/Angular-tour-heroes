@@ -25,6 +25,8 @@ import { HeroFormComponent } from './components/hero-form/hero-form.component';
 import { ZorroPageComponent } from './pages/zorro-page/zorro-page.component';
 
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { TestComponent } from './pages/test/test.component';
+import { AComponent } from './pages/test/a/a.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     ProfileEditorComponent,
     HeroFormComponent,
     ZorroPageComponent,
+    TestComponent,
+    AComponent,
   ],
   imports: [
     HttpClientModule,
