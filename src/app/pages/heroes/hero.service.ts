@@ -4,8 +4,8 @@ import { Observable, of } from "rxjs";
 import { catchError, map, tap } from "rxjs/operators";
 
 import { Hero } from "./hero";
-import { HEROES } from "./mock-heroes";
-import { MessageService } from "./message.service";
+import { HEROES } from "../../mock-heroes";
+import { MessageService } from "../../message.service";
 
 const httpOptions = {
   headers: new HttpHeaders({ "Content-Type": "application/json" })
