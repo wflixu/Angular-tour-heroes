@@ -1,5 +1,12 @@
-<div>
+<div >
   name:{{name}}
   <br>
   text:{{text}}
+
 </div>
+<h2>原生</h2>
+<button (click)="onClick()">test1</button>
+
+
+<h2>自定义事件</h2>
+<app-a (back)="back($event)"></app-a>

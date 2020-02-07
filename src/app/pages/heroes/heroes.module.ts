@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { NzButtonModule } from 'ng-zorro-antd/button';
+
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroDetailComponent } from 'src/app/pages/heroes/hero-detail/hero-detail.component';
@@ -21,7 +23,8 @@ import { HeroesComponent } from './heroes/heroes.component';
   imports: [
     CommonModule,
     FormsModule,
-    HeroesRoutingModule
+    NzButtonModule,
+    HeroesRoutingModule,
   ]
 })
 export class HeroesModule { }

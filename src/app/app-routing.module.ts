@@ -11,13 +11,22 @@ import { ZorroPageComponent } from './pages/zorro-page/zorro-page.component';
 
 import { TestComponent } from './pages/test/test.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/heroes", pathMatch: "full" },
+  {
+    path: "",
+    component: MainComponent,
+  },
+  {
+    path: 'tour',
+    loadChildren: () => import('./pages/heroes/heroes.module').then(m => m.HeroesModule),
+    data: { preload: false },
+  },
 
   { path: "zorro", component: ZorroPageComponent },
   { path: "form", component: FormPageComponent },
-  { path: "test", component: TestComponent },
+  // { path: "test", component: TestComponent },
 
   { path: "heroes-tour", component: HeroesTourComponent },
 
@@ -25,7 +34,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    useHash: true
+  })],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

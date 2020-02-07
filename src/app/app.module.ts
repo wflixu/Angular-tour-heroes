@@ -24,11 +24,12 @@ import { HeroFormComponent } from './components/hero-form/hero-form.component';
 import { ZorroPageComponent } from './pages/zorro-page/zorro-page.component';
 
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { TestComponent } from './pages/test/test.component';
 import { AComponent } from './pages/test/a/a.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroListComponent } from './pages/heroes/hero-list/hero-list.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { MainComponent } from './pages/main/main.component';
+
 
 @NgModule({
   declarations: [
@@ -42,10 +43,10 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     ProfileEditorComponent,
     HeroFormComponent,
     ZorroPageComponent,
-    TestComponent,
     AComponent,
     CrisisListComponent,
     PageNotFoundComponent,
+    MainComponent,
   ],
   imports: [
     HttpClientModule,

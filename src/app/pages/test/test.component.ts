@@ -27,4 +27,11 @@ export class TestComponent implements OnInit {
     this.cd.detectChanges();
    }
 
+   onClick(event:Event) {
+     console.log(event);
+   }
+   public back(num:number){
+     console.log(num);
+   }
+
 }
