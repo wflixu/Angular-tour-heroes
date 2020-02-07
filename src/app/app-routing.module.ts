@@ -23,6 +23,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/heroes/heroes.module').then(m => m.HeroesModule),
     data: { preload: false },
   },
+  {
+    path: 'ad',
+    loadChildren: () => import('./pages/ad/ad.module').then(m => m.AdModule),
+    data: { preload: false },
+  },
 
   { path: "zorro", component: ZorroPageComponent },
   { path: "form", component: FormPageComponent },
@@ -34,7 +39,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{
+  imports: [RouterModule.forRoot(routes, {
     useHash: true
   })],
   exports: [RouterModule]
