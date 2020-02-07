@@ -28,6 +28,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/ad/ad.module').then(m => m.AdModule),
     data: { preload: false },
   },
+  {
+    path: 'web-com',
+    loadChildren: () => import('./pages/web-com/web-com.module').then(m => m.WebComModule),
+    data: { preload: false },
+  },
 
   { path: "zorro", component: ZorroPageComponent },
   { path: "form", component: FormPageComponent },
