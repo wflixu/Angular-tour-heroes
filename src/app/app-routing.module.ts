@@ -5,7 +5,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { DashboardComponent } from "./pages/heroes/dashboard/dashboard.component";
 import { HeroDetailComponent } from "./pages/heroes/hero-detail/hero-detail.component";
 
-import { HeroesTourComponent } from "./pages/heroes-tour/heroes-tour.component";
+
 import { ZorroPageComponent } from './pages/zorro-page/zorro-page.component';
 
 import { TestComponent } from './pages/test/test.component';
@@ -37,11 +37,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/direct/direct.module').then(m => m.DirectModule),
     data: { preload: false },
   },
+  {
+    path: 'form',
+    loadChildren: () => import('./pages/myform/myform.module').then(m => m.MyformModule),
+    data: { preload: false },
+  },
 
   { path: "zorro", component: ZorroPageComponent },
 
-
-  { path: "heroes-tour", component: HeroesTourComponent },
 
   { path: '**', component: PageNotFoundComponent }
 ];

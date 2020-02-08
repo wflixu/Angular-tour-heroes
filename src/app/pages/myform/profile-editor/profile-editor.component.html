@@ -1,15 +1,13 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-
   <label>
     First Name:
-    <input type="text" formControlName="firstName" required>
+    <input type="text" formControlName="firstName">
   </label>
 
   <label>
     Last Name:
     <input type="text" formControlName="lastName">
   </label>
-
   <div formGroupName="address">
     <h3>Address</h3>
 
@@ -33,13 +31,24 @@
       <input type="text" formControlName="zip">
     </label>
   </div>
+  <div formArrayName="aliases">
+    <h3>Aliases</h3> <button (click)="addAlias()">Add Alias</button>
 
+    <div *ngFor="let alias of aliases.controls; let i=index">
+      <!-- The repeated alias template -->
+      <label>
+        Alias:
+        <input type="text" [formControlName]="i">
+      </label>
+    </div>
+  </div>
+
+  <hr>
+  <button type="submit" [disabled]="!profileForm.valid">Submit({{profileForm.valid}})</button>
 </form>
-
-<p>
-  <button (click)="updateProfile()">Update Profile</button>
-</p>
-
 <p>
   Form Status: {{ profileForm.status }}
+</p>
+<p>
+  <button (click)="updateProfile()">Update Profile</button>
 </p>
