@@ -18,7 +18,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HeroFormComponent } from './components/hero-form/hero-form.component';
 import { ZorroPageComponent } from './pages/zorro-page/zorro-page.component';
 
-import { AComponent } from './pages/test/a/a.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { MainComponent } from './pages/main/main.component';
@@ -31,7 +30,6 @@ import { MainComponent } from './pages/main/main.component';
     MessagesComponent,
     HeroFormComponent,
     ZorroPageComponent,
-    AComponent,
     CrisisListComponent,
     PageNotFoundComponent,
     MainComponent,

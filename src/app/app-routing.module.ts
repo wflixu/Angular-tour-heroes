@@ -8,7 +8,6 @@ import { HeroDetailComponent } from "./pages/heroes/hero-detail/hero-detail.comp
 
 import { ZorroPageComponent } from './pages/zorro-page/zorro-page.component';
 
-import { TestComponent } from './pages/test/test.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { MainComponent } from './pages/main/main.component';
 

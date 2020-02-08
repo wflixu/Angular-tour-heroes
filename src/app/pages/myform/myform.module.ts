@@ -6,6 +6,7 @@ import { MyformRoutingModule } from './myform-routing.module';
 import { FormPageComponent } from './form-page.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     NameEditorComponent,
     FormPageComponent,
     ProfileEditorComponent,
+    HeroFormComponent,
   ],
   imports: [
     CommonModule,

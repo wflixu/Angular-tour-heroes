@@ -13,7 +13,7 @@ export class DirectComponent implements OnInit {
   ngOnInit() {
   }
 
-  public toggle(){
+  public toggle(event: Event){
     this.condition = !this.condition;
   }
 
