@@ -6,7 +6,6 @@ import { DashboardComponent } from "./pages/heroes/dashboard/dashboard.component
 import { HeroDetailComponent } from "./pages/heroes/hero-detail/hero-detail.component";
 
 import { HeroesTourComponent } from "./pages/heroes-tour/heroes-tour.component";
-import { FormPageComponent } from "./pages/form-page/form-page.component";
 import { ZorroPageComponent } from './pages/zorro-page/zorro-page.component';
 
 import { TestComponent } from './pages/test/test.component';
@@ -33,10 +32,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/web-com/web-com.module').then(m => m.WebComModule),
     data: { preload: false },
   },
+  {
+    path: 'direct',
+    loadChildren: () => import('./pages/direct/direct.module').then(m => m.DirectModule),
+    data: { preload: false },
+  },
 
   { path: "zorro", component: ZorroPageComponent },
-  { path: "form", component: FormPageComponent },
-  // { path: "test", component: TestComponent },
+
 
   { path: "heroes-tour", component: HeroesTourComponent },
 
