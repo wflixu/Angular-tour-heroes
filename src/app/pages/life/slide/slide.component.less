@@ -1,0 +1,44 @@
+app-slide {
+  display: block;
+}
+
+.slide-pager {
+  list-style: none;
+  display: flex;
+  border:1px solid #971;
+  justify-content: center;
+
+}
+.slide-pager>li {
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border:1px solid #898986;
+   margin-right: 10px;
+   &:hover {
+     cursor: pointer;
+   }
+   &.active {
+     background-color: blue;
+     color:white;
+   }
+}
+
+.slide-content {
+  border: 1px solid red;
+  position: relative;
+  overflow: hidden;
+  .slide-list-wraper{
+    widows: 9999px;;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    transition: left 1s;
+  }
+}
+
+

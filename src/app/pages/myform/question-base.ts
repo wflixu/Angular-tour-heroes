@@ -1,22 +1,31 @@
 export class QuestionBase<T> {
   value: T;
-  key: string;
-  label: string;
-  required: boolean;
-  order: number;
-  controlType: string;
-  type: string;
-  options: {key: string, value: string}[];
 
-  constructor(options: {
-      value?: T,
-      key?: string,
-      label?: string,
-      required?: boolean,
-      order?: number,
-      controlType?: string,
-      type?: string
-    } = {}) {
+  key: string;
+
+  label: string;
+
+  required: boolean;
+
+  order: number;
+
+  controlType: string;
+
+  type: string;
+
+  options: { key: string; value: string }[];
+
+  constructor(
+    options: {
+      value?: T;
+      key?: string;
+      label?: string;
+      required?: boolean;
+      order?: number;
+      controlType?: string;
+      type?: string;
+    } = {}
+  ) {
     this.value = options.value;
     this.key = options.key || '';
     this.label = options.label || '';

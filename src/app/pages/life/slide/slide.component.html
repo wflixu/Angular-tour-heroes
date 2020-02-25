@@ -1,0 +1,15 @@
+<ul class="slide-pager">
+  <li
+  *ngFor="let page of pageList;let i = index"
+   [ngClass]="{'active': i === curPage-1}"
+   (click)="goPage(page)"
+   >{{page}}</li>
+</ul>
+<div class="slide-content" #listWraper>
+  <div class="slide-list-wraper"  [ngStyle]="{'left': left}">
+    <ng-content></ng-content>
+  </div>
+</div>
+
+
+

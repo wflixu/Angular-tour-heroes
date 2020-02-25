@@ -1,0 +1,19 @@
+<p>life works!</p>
+<br>
+<ul>
+  <li *ngFor="let log of logs">{{log}}</li>
+</ul>
+
+
+<app-slide (pageChange)="onPageChange($event)" [curIdx]="curIdx">
+  <app-box *ngFor="let box of boxs;let i = index;"
+     [active]="i===curIdx"
+   >
+    <h2>{{box.text}}</h2>
+  </app-box>
+</app-slide>
+<br>
+<br>
+<button (click)="changeCurIdx()"> change {{curIdx}}</button>
+
+

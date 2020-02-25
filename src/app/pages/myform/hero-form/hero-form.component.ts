@@ -6,7 +6,7 @@ import { Hero } from './../../../models/hero';
   templateUrl: './hero-form.component.html',
   styleUrls: ['./hero-form.component.less']
 })
-export class HeroFormComponent   {
+export class HeroFormComponent {
 
   powers = ['Really Smart', 'Super Flexible',
     'Super Hot', 'Weather Changer'];
