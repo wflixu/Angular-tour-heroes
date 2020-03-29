@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <-- NgMode
 
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { TodayModule } from 'today';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -39,6 +40,7 @@ import { MainComponent } from './pages/main/main.component';
     ReactiveFormsModule,
     FormsModule,
     HeroesModule,
+    // TodayModule,
     AppRoutingModule,
     NgZorroAntdModule,
     NzButtonModule,

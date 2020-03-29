@@ -15,10 +15,13 @@ const routes: Routes = [
     component: MainComponent
   },
   {
+    path: 'mylib',
+    loadChildren: () =>import('./pages/mylib/mylib.module').then(m => m.MylibModule)
+  },
+  {
     path: 'tour',
     loadChildren: () =>
-      import('./pages/heroes/heroes.module').then(m => m.HeroesModule),
-    data: { preload: false }
+      import('./pages/heroes/heroes.module').then(m => m.HeroesModule)
   },
   {
     path: 'ad',
@@ -64,3 +67,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
+

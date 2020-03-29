@@ -129,6 +129,46 @@
           }
         }
       }
+    },
+    "today": {
+      "projectType": "library",
+      "root": "projects/today",
+      "sourceRoot": "projects/today/src",
+      "prefix": "to",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/today/tsconfig.lib.json",
+            "project": "projects/today/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/today/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/today/src/test.ts",
+            "tsConfig": "projects/today/tsconfig.spec.json",
+            "karmaConfig": "projects/today/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/today/tsconfig.lib.json",
+              "projects/today/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "angular-play"
 }
