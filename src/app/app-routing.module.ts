@@ -15,6 +15,18 @@ const routes: Routes = [
     component: MainComponent
   },
   {
+    path: 'chat',
+    loadChildren: () =>import('./pages/chat/chat.module').then(m => m.ChatModule)
+  },
+  {
+    path: 'reddit',
+    loadChildren: () =>import('./pages/reddit/reddit.module').then(m => m.RedditModule)
+  },
+  {
+    path: 'inventory',
+    loadChildren: () =>import('./pages/inventory/inventory.module').then(m => m.InventoryModule)
+  },
+  {
     path: 'mylib',
     loadChildren: () =>import('./pages/mylib/mylib.module').then(m => m.MylibModule)
   },
@@ -51,6 +63,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/life/life.module').then(m => m.LifeModule),
     data: { preload: false }
+  },
+  {
+    path: 'foo',
+    loadChildren: () =>
+      import('./pages/foo/foo.module').then(m => m. FooModule)
   },
 
   { path: 'zorro', component: ZorroPageComponent },
