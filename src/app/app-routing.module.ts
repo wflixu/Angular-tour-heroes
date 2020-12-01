@@ -52,6 +52,12 @@ const routes: Routes = [
       import('./pages/life/life.module').then(m => m.LifeModule),
     data: { preload: false }
   },
+  {
+    path: 'change',
+    loadChildren: () =>
+      import('./pages/change/change.module').then(m => m.ChangeModule),
+    data: { preload: false }
+  },
 
   { path: 'zorro', component: ZorroPageComponent },
 
