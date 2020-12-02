@@ -1,11 +1,17 @@
 
 <h2>changeComponent</h2>
 <hr>
+<input type="text" [(ngModel)]="value">
+<app-foo [name]="name" [items]="items"></app-foo>
 
-<app-foo [name]="name" []></app-foo>
+<app-bar></app-bar>
 
 <hr>
 
 <button (click)="changeName()">
   change name
 </button>
+
+<button (click)="newValue()">重新赋值</button>
+<button (click)="push()">push</button>
+<button (click)="change()">改变一个值</button>
