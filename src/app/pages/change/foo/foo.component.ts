@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, Input, IterableDiffer, IterableDiff
 @Component({
   selector: 'app-foo',
   templateUrl: './foo.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./foo.component.less']
 })
 export class FooComponent implements OnInit {
@@ -11,6 +11,11 @@ export class FooComponent implements OnInit {
   @Input() name: string;
 
   @Input() items: Array<string> = [];
+
+ public get detail() {
+    console.log('get detail');
+    return 'this is a detail string';
+}
   private itemsDiffer : IterableDiffer<any>;
   constructor(private iterableDiffers:IterableDiffers) { }
 

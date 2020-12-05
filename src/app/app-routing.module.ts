@@ -58,6 +58,12 @@ const routes: Routes = [
       import('./pages/change/change.module').then(m => m.ChangeModule),
     data: { preload: false }
   },
+  {
+    path: 'shop',
+    loadChildren: () =>
+      import('./pages/shop/shop.module').then(m => m.ShopModule),
+    data: { preload: false }
+  },
 
   { path: 'zorro', component: ZorroPageComponent },
 
