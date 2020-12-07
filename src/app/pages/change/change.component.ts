@@ -2,25 +2,46 @@ import { ChangeDetectionStrategy, Component, IterableDiffers, OnInit } from '@an
 
 @Component({
   selector: 'app-change',
-  templateUrl: './change.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./change.component.less']
+  template:`
+    <h2>changeComponent</h2>
+    <hr>
+    input in father component
+    <input type="text" [(ngModel)]="value">
+
+    <button (click)="changeName()">
+      change name
+    </button>
+    <hr>
+    <app-foo [father]="name"></app-foo>
+  `,
+
 })
 export class ChangeComponent implements OnInit {
-  name: string;
+  private _name:string = 'foo';
+  get name(): string {
+    // console.log('get name');
+    return this._name;
+  }
+  set name (value) {
+    this._name = value;
+  }
   value: string;
   items: Array<any> = ['Really', 'Super', 'Greater'];
-  // iterableDiffers:IterableDiffers = new IterableDiffers()
-  constructor(iterableDiffers:IterableDiffers) { }
+
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   changeName(){
-    this.name = "chened name";
     //
-
+    this.name = "chened name";
   }
+
+
+
+
   newValue(){
       // 重新赋值
       this.items = [...this.items, 'Code'];

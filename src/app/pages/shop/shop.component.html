@@ -1,5 +1,13 @@
 <h2>shop <a routerLink="./cart" class="button fancy-button">
   Checkout
 </a></h2>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+<app-product-list [products]="products"></app-product-list>
+<p>
+  <button (click)="test1()">[index]=</button>
+  <button (click)="test2()">push</button>
+  <button (click)="test()">reset</button>
+  <button (click)="test3()">change object attribute</button>
+</p>
+
 
